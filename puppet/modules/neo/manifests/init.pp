@@ -11,6 +11,9 @@ class neo {
 	->
 	# Configure Neo4j Server
 	class { 'neo::configure': }
+  ->
+  # Load data 
+  class { 'neo::applydata': }
 	->
 	# Start Neo4j Server
 	class { 'neo::service': }

@@ -12,9 +12,4 @@ class neo::service {
 			command	=> "service neo4j-service start"
 	}
 
-	
-  exec {
-   "chown -R neo4j:neo4j  /opt/neo4j/neo4j-community-1.7.2/data/graph.db":
-  }
-
 }
