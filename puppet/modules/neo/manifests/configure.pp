@@ -14,5 +14,8 @@ class neo::configure {
 			unless	=> "grep \"ulimit -n ${neo::params::ulimitn} && checklimits\" ${neo::params::installationdir}/${neo::params::neoversion}/bin/neo4j",
 			command	=> "sed -i -e \'s/checklimits/ulimit -n ${neo::params::ulimitn} \\&\\& checklimits/g\' ${neo::params::installationdir}/${neo::params::neoversion}/bin/neo4j";				
 	}
+  exec {
+   "cp -R /vagrant/data/dump /opt/neo4j/neo4j-community-1.7.2/data/graph.db":
+  }
 	
 }
