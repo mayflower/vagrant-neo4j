@@ -12,6 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box     = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
  
+  config.vm.network :private_network, ip: "192.168.50.5"
   config.vm.network "forwarded_port", guest: 7474, host: 7474 
 
   config.vm.provision :shell, :inline => "sudo apt-get update --fix-missing"
