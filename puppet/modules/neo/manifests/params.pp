@@ -2,10 +2,10 @@ class neo::params {
 	
 	case $operatingsystem {
 		/(Ubuntu|Debian)/: {
-			$jreinstaller = 'default-jre'
+			$jreinstaller = 'openjdk-7-jdk'
 		}
 		/(RedHat|CentOS|Fedora)/: {
-			$jreinstaller = 'java-1.6.0-openjdk'
+			$jreinstaller = 'java-1.7.0-openjdk'
 		}
 	}
 
@@ -17,5 +17,6 @@ class neo::params {
 	$installationdir = '/opt/neo4j'
 	$neouser = 'neo4j'
 	$ulimitn = '40000'
+        $rabbitholegit = 'https://github.com/neo4j-contrib/rabbithole.git'
 	
 }

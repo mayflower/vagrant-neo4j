@@ -11,6 +11,9 @@ class neo {
 	->
 	# Configure Neo4j Server
 	class { 'neo::configure': }
+        ->
+        # Install Rabbithole client
+        class { 'neo::rabbithole': }
   ->
   # Load data 
   class { 'neo::applydata': }
