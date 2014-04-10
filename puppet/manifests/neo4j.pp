@@ -12,4 +12,8 @@
 #
 # [Remember: No empty lines between comments and class definition]
 package { 'curl': ensure => installed }
+package { 'git': ensure => installed }
+package { 'maven': ensure => installed }
+package { 'default-jdk': ensure => installed }
+
 include neo
