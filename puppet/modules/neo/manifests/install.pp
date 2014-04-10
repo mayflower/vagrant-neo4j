@@ -28,7 +28,7 @@ class neo::install {
 		'install-neo4j':
 			require	=> [ User["${neo::params::neouser}"], Exec['extract-bin-package']],
 			unless	=> "test -L /etc/init.d/neo4j-service",
-			command	=> "${neo::params::installationdir}/${neo::params::neoversion}/bin/neo4j -u ${neo::params::neouser} -h install"
+			command	=> "${neo::params::installationdir}/${neo::params::neoversion}/bin/neo4j-installer -u ${neo::params::neouser} install"
 	}
 	
 	user {
